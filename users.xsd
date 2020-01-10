@@ -1,0 +1,25 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="users">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="user" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="id"/>
+              <xs:element type="xs:string" name="login"/>
+              <xs:element type="xs:string" name="firstname"/>
+              <xs:element type="xs:string" name="lastname"/>
+              <xs:element type="xs:string" name="mail"/>
+              <xs:element type="xs:string" name="created_on"/>
+              <xs:element type="xs:string" name="last_login_on"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute type="xs:byte" name="total_count"/>
+      <xs:attribute type="xs:byte" name="offset"/>
+      <xs:attribute type="xs:byte" name="limit"/>
+      <xs:attribute type="xs:string" name="type"/>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
